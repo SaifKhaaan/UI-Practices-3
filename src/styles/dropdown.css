@@ -1,0 +1,26 @@
+.dropdown {
+    position: relative; /* Necessary for absolute positioning of the modal */
+  }
+  
+  .dropdown button {
+    /* Style the dropdown button (refer to previous styles) */
+  }
+  
+  .modal {
+    position: fixed; 
+    top: 20%;
+    left: 0;
+    width: 953px;
+    height: 500px; 
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: rgb(9, 11, 18); /* Set modal content background color */
+    padding: 20px; /* Add some padding */
+    border-radius: 5px; /* Rounded corners */
+  }
+  

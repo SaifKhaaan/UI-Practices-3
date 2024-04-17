@@ -1,0 +1,103 @@
+.modal {
+  display: flex;
+
+  padding: 24px 32px 24px 32px;
+  z-index: 999;
+}
+.modal-content {
+  width: 1001px;
+  height: 556px;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+
+  position: fixed; /* Ensures the modal overlays other content */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mid-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+}
+
+:right {
+}
+
+.object-item {
+ 
+  display: flex;
+flex-direction: column;
+  align-items: center;
+  
+ 
+}
+.object-item img {
+  margin-right: 20px;
+}
+
+#modal22-map {
+  border-right: 1px solid rgb(67, 63, 79);
+  border-top-left-radius:12px ;
+  border-bottom-left-radius: 12px;
+}
+
+#modal22-map:hover , #modal22-map:active {
+background-color: rgb(14,16,23);
+
+}
+
+.map-objects{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-left: 30px;
+  padding-right: 10px;
+  width: 465px;
+  
+}
+.right{
+  display: flex;
+  justify-content: center;
+  width: 465px;
+}
+
+
+.modal-continue-btn button{
+  width:840px;
+  height:48px;
+  /* background-color: linear-gradient(to right,  0%, 100%) ; */
+  background-image: linear-gradient(to right, #9EC5FF ,  #B0FFFA);
+
+  border-radius: 100px;
+  margin-top: 100px;
+}
+
+.modal-continue-btn p{
+font-size: larger;
+}
+
+.wallet-map{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: left;
+  width: 400px;
+}
+
+.wallet-map img{
+  margin-right: 20px;
+}
+
+
+.button:hover{
+  transform: scale(0.95);
+
+}

@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+background-color: black;
+}
+html,body {
+  font-family: 'Gilroy-Regular';
+}
+@font-face {
+  font-family: 'Gilroy-Regular'; /* Replace with your font name */
+  src: url('./fonts/Gilroy-Regular.ttf') format('truetype'); /* Add formats for broader compatibility */
+      
+  font-weight: normal;
+  font-style: normal;
+}
+
+code {
+ 
+}
+
+
+button:hover{
+      transform: scale(0.95);
+      transition: transform 0.2s ease-in-out;
+}
