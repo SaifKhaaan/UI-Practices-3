@@ -1,8 +1,26 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import "./navbar.css"
+import Modal22 from "../views/Modal22";
+import { useState } from "react";
+import "../styles/dropdown.css";
+
+
+import "../styles/modalSwap.css";
+
 
 const Navbar = () => {
+  const [showModal22, setShowModal22] = useState(false);
+
+  const[iitem,setiitem] = useState({title:"",img:""});
+
+  const openModal22 = () => {
+    setShowModal22(true);
+  };
+
+  const closeModal22 = () => {
+    setShowModal22(false);
+  };
   return (
     <div>
       
@@ -37,19 +55,21 @@ const Navbar = () => {
 
 
 <div className='nav-btn'>
-    <button>
-    
+    <button onClick={openModal22}>
+   
       
    
         
         
-        <Link to="/Connect"> <div className='nav-btnn' >
+       <div className='nav-btnn' >
             <div>  <img src="btnicon.png" alt="" /></div>
-            <div> <p>Connect</p></div>
-            </div>  </Link> 
+            <div><h3>Connect</h3></div>
+            </div>    
     </button>
 </div>
       </nav>
+      {showModal22 && <Modal22   onClose={closeModal22} setiitem={setiitem} />}
+      {/* {showModal22 && <Modal22  onClose={closeModal22} setiitem={setiitem}/>} */}
     </div>
   )
 }

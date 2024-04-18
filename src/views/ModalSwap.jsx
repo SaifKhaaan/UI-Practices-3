@@ -5,6 +5,7 @@ import "../styles/dropdown.css";
 import { useState } from "react";
 import Modal22 from "./Modal22";
 import Modal from "./Modal";
+import SettingModal from "./SettingModal";
 
 
 const ModalSwap = () => {
@@ -15,6 +16,7 @@ const ModalSwap = () => {
 
   const[iitem,setiitem] = useState({title:"",img:""});
   
+  const [showsettingModal, setsettingModal] = useState(false);
 //   const mydiv = false
 
 //   const replace=()=>{
@@ -34,6 +36,7 @@ const swap=()=>{
   setitem(iitem)
 }
 
+
   const openModal = () => {
     setShowModal(true);
   };
@@ -51,6 +54,14 @@ const swap=()=>{
   };
 
 
+  const opensettingModal = () => {
+    setsettingModal(true);
+  };
+
+  const closethesettingModal = () => {
+    setsettingModal(false);
+  };
+
   return (
     <div className="modal1">
       <div className="modal-top">
@@ -58,14 +69,16 @@ const swap=()=>{
           <h2>Swap</h2>
         </div>
         <div className="setting-icon">
-          <button>
+          <button onClick={opensettingModal}>
           <img src="settingsicon.png" alt="" />
 
           </button>
+    
         </div>
+
       </div>
 
-
+      {showsettingModal  && <SettingModal onClose={closethesettingModal}/> }
  {/* {mydiv && */}
   <div id="div1" className="modal-middle" >
         <div className="modal-selection">
