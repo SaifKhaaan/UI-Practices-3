@@ -36,10 +36,10 @@ display: flex;
 justify-content: space-between;
 align-items:center ;
 
-
+width: 384px;
 }
-.setting-top-part h2{
-    font-size: 16px;
+.setting-top-part h1{
+    font-size: 19px;
 }
 
 .slip-container{

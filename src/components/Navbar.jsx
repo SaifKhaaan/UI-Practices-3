@@ -17,6 +17,7 @@ const Navbar = () => {
   const openModal22 = () => {
     setShowModal22(true);
   };
+  // console.log(iitem)
 
   const closeModal22 = () => {
     setShowModal22(false);
@@ -35,11 +36,7 @@ const Navbar = () => {
               <Link to="/Swap"><p>Swap</p></Link>
            
           </div>
-          <div className="navbar-items">
-            
-              <Link to="/Stake"><p>Stake</p></Link>
-            
-          </div>
+         
           <div className="navbar-items">
         
               <Link to="/Pool"><p>Pool</p></Link>
@@ -68,7 +65,9 @@ const Navbar = () => {
     </button>
 </div>
       </nav>
-      {showModal22 && <Modal22   onClose={closeModal22} setiitem={setiitem} />}
+      {showModal22 && <Modal22   onClose={closeModal22} 
+      setiitem={setiitem} 
+      />}
       {/* {showModal22 && <Modal22  onClose={closeModal22} setiitem={setiitem}/>} */}
     </div>
   )

@@ -27,7 +27,7 @@ const SettingModal = ({onClose}) => {
     <div className='setting-modal-container'>
       
       <div className='setting-top-part'> 
-      <div><h2>Setting</h2>
+      <div><h1>Setting</h1>
         </div>
         <div className='cross-btn'>
           <button onClick={onClose}>
@@ -68,7 +68,7 @@ style={trackStyle}
     </div>
 
         </div>
-        <div className='setting-save-btn'> <button><h2>Save</h2></button></div>
+        <div className='setting-save-btn'> <button onClick={onClose}><h2>Save</h2></button></div>
     </div> 
    
     </div>
