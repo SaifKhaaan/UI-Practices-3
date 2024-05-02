@@ -9,16 +9,16 @@ import image2 from "./image2.png"
 import MetaMask from "./MetaMask.webp"
 import { useState } from 'react';
 
-const Modal = ({ onClose, setitem }) => {
+const Modal = ({ onClose, setitem ,setitems}) => {
 
   const [selecteditem, setSelecteditem] = useState(null);
   const [subarray, setsubarray] = useState(null);
 
   const handleClick = (item) => {
     setSelecteditem(item);
-setsubarray(item.subitems)
-    
-  };
+setsubarray(item.subitems);
+
+    };
   console.log( "item", subarray)
 
 

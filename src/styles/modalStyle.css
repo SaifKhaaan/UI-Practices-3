@@ -101,3 +101,65 @@ font-size: larger;
   transform: scale(0.95);
 
 }
+
+
+
+/* For screens less than 768px */
+@media (max-width: 768px) {
+  .modal {
+    padding: 16px;
+    overflow-y: scroll;
+  }
+  
+  .modal-content {
+    width: 280px;
+   
+    height: 580px;
+
+    border-radius: 20px;
+    padding: 16px;
+    top: 3%;
+    left: 3%;
+    position: fixed; /* Ensures the modal overlays other content */
+
+    transform: none;
+  }
+
+  .mid-container {
+    flex-direction: column;
+  }
+
+  .object-item img {
+    margin-right: 0;
+    margin-bottom: 10px; /* Adding space between images */
+  }
+
+  .map-objects {
+    /* flex-direction: column; */
+    padding: 10px;
+    width: auto;
+  
+  }
+
+  .right {
+    width: auto;
+  }
+
+  .modal-continue-btn button {
+   
+    width: 200px;
+  }
+
+  .wallet-map {
+    flex-direction: row;
+    width: auto;
+  }
+.array-map{
+  height: 160px;
+  overflow-y: scroll;
+}
+  .wallet-map img {
+    margin-right: 0;
+    margin-bottom: 10px; /* Adding space between images */
+  }
+}

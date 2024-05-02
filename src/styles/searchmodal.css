@@ -246,7 +246,9 @@ align-items: center;
   .search-modal-container {
     padding: 16px;
   }
-
+.token-objects-outer-container{
+  width: 250px;
+}
   .search-top-part h2 {
     font-size: 18px;
   }

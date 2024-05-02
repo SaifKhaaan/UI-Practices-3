@@ -7,7 +7,7 @@ import binancedexImage from "./binancedex.png";
 import polygonImage from "./Vector2.png";
 
 
-const SearchModal = ({onClose,setcoin,coin}) => {
+const SearchModal = ({onClose,setcoin}) => {
 
   // const [
   //   selectedcoin,
@@ -58,7 +58,7 @@ const SearchModal = ({onClose,setcoin,coin}) => {
             </div>
             <div className='display-left'>
             <div className="token-objects-outer-container">
-            {(coinArray && coinArray.length > 0)  && coinArray.slice(0, -1).map((coin) => {
+            {(coinArray && coinArray.length > 0)  && coinArray.slice(0, -2).map((coin) => {
                 return (
                   <div
                    

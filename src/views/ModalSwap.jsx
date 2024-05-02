@@ -7,8 +7,38 @@ import Modal22 from "./Modal22";
 import Modal from "./Modal";
 import SettingModal from "./SettingModal";
 import SearchModal from "./SearchModal";
+import Modalenter from "./Modalenter";
+
+export const getFirstWordcoin = (title) => {
+  const firstSpaceIndex = title?.indexOf(" ");
+  return firstSpaceIndex !== -1 ? title?.slice(0, firstSpaceIndex) : title;
+};
 
 const ModalSwap = () => {
+
+
+
+  const [data, setData] = useState([
+    { title: '', img: '' },
+    { title: '', img: '' },
+    { title: '', img: '' }
+  ]);
+  // Function to update data at a specific index
+  const updateDataAtIndex = (index, newData) => {
+    setData(prevData => {
+      const updatedData = [...prevData];
+      updatedData[index] = newData;
+      return updatedData;
+    });
+  };
+
+
+
+  const [value, setValue] = useState(0);
+  const [value1, setValue1] = useState(0);
+
+  
+ 
   const [showModal, setShowModal] = useState(false);
   const [showModal22, setShowModal22] = useState(false);
 
@@ -18,13 +48,29 @@ const ModalSwap = () => {
 
   const [iitem2, setiitem2] = useState({ title: "", img: "" });
 
+  const [coin, setcoin] = useState({ title: "", img: "" });
+
+  // const items = [
+  //   item,
+  //   iitem,
+  //   iitem2,
+  //   coin,
+  // ];
+
+  const [items, setItems] = useState([
+    { title: "", img: "" },
+  ]);
+  console.log(items,'item in swap modal')
 
   const [showsettingModal, setsettingModal] = useState(false);
 
   const [searchmodal, setsearchmodal] = useState(false);
   const [searchmodal2, setsearchmodal2] = useState(false);
 
-  const [coin, setcoin] = useState({ title: "", img: "" });
+  
+
+
+  const [modalenter,setmodalenter] = useState(false)
 
   //   const mydiv = false
 
@@ -73,10 +119,22 @@ const ModalSwap = () => {
     setsearchmodal(false);
   };
 
-  const getFirstWordcoin = (title) => {
-    const firstSpaceIndex = title.indexOf(" ");
-    return firstSpaceIndex !== -1 ? title.slice(0, firstSpaceIndex) : title;
-  };
+ 
+
+  const handleChange = (event) => {
+    const newValue = event.target.value;
+    if (!isNaN(newValue) && newValue.length <= 4) {
+      setValue(newValue);
+     
+    }
+  }
+  const handleChange1 = (event) => {
+    const newValue = event.target.value;
+    if (!isNaN(newValue) && newValue.length <= 4) {
+     
+      setValue1(newValue);
+    }
+  }
 
   return (
     <div className="modal1">
@@ -121,7 +179,7 @@ const ModalSwap = () => {
 
         <div className="input-wrapper">
           <div>
-            <input type="number" defaultValue={0} />{" "}
+            <input type="number" defaultValue={0} value={value} onChange={handleChange} />{" "}
           </div>
           <div className="input-right">
             <div className="max">
@@ -182,7 +240,7 @@ const ModalSwap = () => {
 
         <div className="input-wrapper">
           <div>
-            <input type="number" defaultValue={0} />{" "}
+            <input type="number" defaultValue={0} value={value1} onChange={handleChange1} />{" "}
           </div>
           <div className="input-right">
             <div className="max">
@@ -193,7 +251,7 @@ const ModalSwap = () => {
               <button onClick={()=>setsearchmodal2(true)}>
                 <div className="modal-btn-div">
                   <div className="coin-icon">
-                    <img src={iitem2.img} alt="" />
+                    <img src={iitem2.img} alt="" /> 
                   </div>
                   <div className="white-text">
                     <p>{getFirstWordcoin(iitem2.title)}</p>
@@ -210,16 +268,23 @@ const ModalSwap = () => {
       </div>
 
       {searchmodal2 && (
-        <SearchModal onClose={()=>setsearchmodal2(false)} setcoin={setiitem2} />
+        <SearchModal onClose={()=>setsearchmodal2(false)} setcoin={setItems} />
       )}
 
-      <footer>
-        <button className="swap-btn">
+      <footer >
+        <button  onClick={()=>setmodalenter(true) }className="swap-btn"  disabled={!value }      style={{ filter: value ? "none" : "blur(1px)" }} >  
           <h3>Enter an Amount</h3>
         </button>
+
+        {modalenter &&(
+          <Modalenter setiitem={setiitem} setitem={setitem} onClose={()=>setmodalenter(false)} item={item} iitem={iitem} value={value} value1={value1}/>
+        )
+          
+        }
       </footer>
     </div>
   );
 };
 
-export default ModalSwap;
+export default ModalSwap
+ 

@@ -1,0 +1,54 @@
+.pool{
+    color: white;
+    padding: 30px;
+    padding-left: 50px;
+    
+}
+.pool h1{
+    
+}
+
+.pool-items{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(9,11,18);
+    color: white;
+    border: 1px solid grey;
+    text-align: left;
+    justify-content: left;
+    width: 250px;
+    padding: 16px;
+    border-radius: 30px;
+    justify-content: space-between;
+    margin-right: 30px;
+
+
+}
+.pool-items p {
+    color: grey;
+ padding: 0;
+ margin-bottom:-15px;
+}
+.pool-items:hover{
+    border: 1px solid #9EC5FF;
+}
+
+.pool-items-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.pool-items img{
+    width: 25px;
+    
+}
+
+
+@media (max-width: 768px) {
+
+.pool-items-container{
+    flex-direction: column;
+}
+    
+}

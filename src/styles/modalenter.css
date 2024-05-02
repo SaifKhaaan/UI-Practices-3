@@ -1,0 +1,324 @@
+.modal-enter-outer-container{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  background-color: black;
+    display: flex;
+    justify-content:center ;
+    align-items:center ;
+    z-index: 999;
+    
+}
+
+.loading-circle {
+  display: flex;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 13px solid rgb(162, 234, 253);
+  
+ 
+  /* background: linear-gradient(to right, rgb(162, 234, 253) 0%, transparent 100%); */
+  border-top-color: transparent; /* Remove top border color for animation */
+  animation: spin 2s linear infinite;
+}
+
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+
+
+  }
+  to {
+    transform: rotate(360deg);
+   
+
+  }
+}
+
+
+
+
+.modal-enter-container{
+
+  width:464px ;
+  height:544px ;
+  background-color: rgb(9,11,18);
+  padding: 32px;
+  border-radius: 8px;
+}
+
+.enter-from-upper{
+  display: flex;
+  flex-direction: row;
+}
+
+.enter-from-lower{
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.border{
+  border-bottom: 2px solid grey;
+  margin-top: 20px;
+}
+
+.enter-swap-btn{
+  display: flex;
+  justify-content: center;
+  margin-left: -300px;
+}
+
+.number-border{
+  height: 96px;
+  border-right: 2px solid #637592;
+  position: absolute;
+  margin-left: 65px;
+  z-index: 1;
+}
+
+.number-circle{
+  border: 1px solid #637592;
+  border-radius: 50%;
+margin-left: 50px;
+margin-bottom: 60px;
+z-index: 99;
+background-color: black;
+display: flex;
+justify-content: center;
+color: #637592;
+position: relative;
+height: 28px;
+width: 28px;
+
+}
+
+
+.number-container{
+margin-top: -50px;
+
+}
+
+
+.enter-from-lower img{
+margin-right: 10px;
+}
+
+
+.number-circle-container{
+
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+}
+
+.number-circle-container h3 {
+  margin-top: -0px;
+  color: #637592; /* Existing color */
+  margin-left: 20px;
+
+
+}
+
+
+
+#firstborder{
+  animation-name: firstborder; 
+  animation-duration: 3s;
+}
+#firstcircle{
+  animation-name: firstcircle; 
+  animation-duration: 3s;
+}
+#firsttext h3{
+  animation-name: firsttext; 
+  animation-duration: 3s;
+}
+
+@keyframes firstborder {
+  from {
+    border:2px solid #637592;
+  }
+  to {
+    border:2px solid rgb(172, 241, 251);
+  }
+}
+
+
+@keyframes firstcircle {
+  from {
+   background-color: black;
+  }
+  to {
+    background-color:  rgb(172, 241, 251);
+  }
+}
+
+@keyframes firsttext {
+  from {
+  color: #637592;
+  }
+  to {
+    color:  white;
+  }
+}
+
+
+.h1{
+  display: flex;
+
+  color: rgb(166,160,188);
+  justify-content: left;
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+
+
+
+
+
+
+
+
+
+#secondborder{
+  animation-name: secondborder; 
+  animation-duration: 6s;
+}
+#secondcircle{
+  animation-name: secondcircle; 
+  animation-duration: 6s;
+}
+#secondtext h3{
+  animation-name: secondtext; 
+  animation-duration: 6s;
+}
+
+@keyframes secondborder {
+  from {
+    border:2px solid #637592;
+  }
+  to {
+    border:2px solid rgb(172, 241, 251);
+  }
+}
+
+
+@keyframes secondcircle {
+  from {
+   background-color: black;
+  }
+  to {
+    background-color:  rgb(172, 241, 251);
+  }
+}
+
+@keyframes secondtext {
+  from {
+  color: #637592;
+  }
+  to {
+    color:  white;
+  }
+}
+
+
+
+
+
+#thirdborder{
+  animation-name: thirdborder; 
+  animation-duration: 8s;
+}
+#thirdcircle{
+  animation-name: thirdcircle; 
+  animation-duration: 8s;
+}
+#thirdtext h3{
+  animation-name: thirdtext; 
+  animation-duration: 8s;
+}
+
+@keyframes thirdborder {
+  from {
+    border:2px solid #637592;
+  }
+  to {
+    border:2px solid rgb(172, 241, 251);
+  }
+}
+
+
+@keyframes thirdcircle {
+  from {
+   background-color: black;
+  }
+  to {
+    background-color:  rgb(172, 241, 251);
+    color: black;
+  }
+}
+
+@keyframes thirdtext {
+  from {
+  color: #637592;
+  }
+  to {
+    color:  white;
+  }
+}
+
+
+
+
+
+
+
+
+
+#fourthcircle{
+  animation-name: fourthcircle; 
+  animation-duration: 10s;
+}
+#fourthtext h3{
+  animation-name: fourthtext; 
+  animation-duration: 10s;
+}
+
+
+
+
+@keyframes fourthcircle {
+  from {
+   background-color: black;
+  }
+  to {
+    background-color:  rgb(172, 241, 251);
+  }
+}
+
+@keyframes fourthtext {
+  from {
+  color: #637592;
+  }
+  to {
+    color:  white;
+  }
+}
+
+
+

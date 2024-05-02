@@ -34,7 +34,7 @@ a {
     margin-right: 32px;
   }
 
-  .nav-btn button{
+  .nav-btn1 button{
  
         background-image: linear-gradient(to right, #9EC5FF 0%, #B0FFFA 100%);
     color: black;
@@ -44,6 +44,8 @@ a {
     padding-right: 16px;
     border-radius: 50px;
     border: none;
+  
+
       
   }
   .nav-btnn{
@@ -51,8 +53,110 @@ a {
     flex-direction: row;
     color: black;
     align-items: center;
+  
+   
 
   }
   .nav-btnn img{
     margin-right: 5px;
+  }
+
+
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    color:white;
+    z-index: 999;
+
+  }
+
+  .nav-btn{
+    visibility: hidden;
+    opacity: 0;
+    padding: 5px;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	outline: none;
+  z-index: 999;
+  }
+
+.nav-btn{
+  color:#9EC5FF ;
+}
+
+.mav-right{
+  display: flex;
+  justify-content:right ;
+}
+  @media (max-width: 768px) {
+    .nav {
+      margin-top: 1rem;
+      position: fixed;
+      top: 0;
+      left: 0; /* Changed from left: 0 to make it slide from left */
+      height: 100%;
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      transition: 1s;
+      transform: translateX(-100vw); /* Changed transform property to translateX */
+      z-index: 999;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+      border-right:2px solid #B0FFFA;
+      flex-direction: column;
+      /* position: fixed;
+      top:0; */
+    }
+  nav{
+    flex-direction: column;
+   
+  }
+ 
+  .nav-mid{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: fixed;
+    top:10%;
+    left: 0;
+  }
+    .responsive_nav {
+      transform: translateX(0); /* Changed transform property to translateX */
+    }
+    .nav-logo-img{
+      position: fixed;
+      top:0;
+    }
+  
+    .nav-btn{
+      visibility: visible;
+      opacity: 1;
+      font-size: larger;
+      border: #89db7b; /* Removed unnecessary double quotes */
+      z-index: 999;
+      position: fixed;
+      right: 0;
+      top:0;
+    }
+   
+
+   
+    .nav-btn1{
+      position: fixed;
+      top:35%;
+      
+    }
+    .header-button-container{
+height: 25px;
+     
+    }
   }

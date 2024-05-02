@@ -4,7 +4,8 @@ import "./navbar.css"
 import Modal22 from "../views/Modal22";
 import { useState } from "react";
 import "../styles/dropdown.css";
-
+import { useRef } from "react";
+import { FaBars} from "react-icons/fa";
 
 import "../styles/modalSwap.css";
 
@@ -13,6 +14,11 @@ const Navbar = () => {
   const [showModal22, setShowModal22] = useState(false);
 
   const[iitem,setiitem] = useState({title:"",img:""});
+  const navRef = useRef();
+  const showNav = () => {
+    navRef.current.classList.toggle("responsive_nav");
+  };
+
 
   const openModal22 = () => {
     setShowModal22(true);
@@ -23,10 +29,14 @@ const Navbar = () => {
     setShowModal22(false);
   };
   return (
-    <div>
-      
-      <nav >
-<div>
+    <div >
+       <div className="header-button-container">
+        <button className="nav-btn" onClick={showNav}>
+          
+          <FaBars />
+        </button></div>
+      <nav className="nav"  ref={navRef}>
+<div className='nav-logo-img'>
     <img src="logo.png" alt="" />
 </div>
 
@@ -50,25 +60,34 @@ const Navbar = () => {
          
             </div>
 
+<div className='nav-right'>
 
-<div className='nav-btn'>
-    <button onClick={openModal22}>
-   
-      
-   
-        
-        
+
+
+<div className='nav-btn1'>
+    <button onClick={openModal22}>      
        <div className='nav-btnn' >
             <div>  <img src="btnicon.png" alt="" /></div>
             <div><h3>Connect</h3></div>
             </div>    
     </button>
 </div>
+
+
+</div>
+
+
       </nav>
+     
+    
       {showModal22 && <Modal22   onClose={closeModal22} 
       setiitem={setiitem} 
       />}
       {/* {showModal22 && <Modal22  onClose={closeModal22} setiitem={setiitem}/>} */}
+    
+    
+      
+
     </div>
   )
 }

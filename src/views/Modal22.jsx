@@ -9,14 +9,14 @@ import image2 from "./image2.png"
 import MetaMask from "./MetaMask.webp"
 import { useState } from 'react';
 
-const Modal22 = ({ onClose, setiitem }) => {
+const Modal22 = ({ onClose, setiitem ,setitems}) => {
 
   const [selectediitem, setSelectediitem] = useState(null);
   const [subarray, setsubarray] = useState(null);
 
   const handleClick = (iitem) => {
     setSelectediitem(iitem);
-setsubarray(iitem.subiitems)
+setsubarray(iitem.subiitems);
     
   };
   console.log( "iitem", subarray)

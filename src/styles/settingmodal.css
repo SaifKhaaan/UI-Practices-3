@@ -143,4 +143,60 @@ border-radius: 20px;
 
     
 }
+
+
+  @media (max-width: 768px) {
+    .setting-modal-container {
+      width: 340px; /* Adjust width to fit smaller screens */
+      height: auto; /* Let height adjust according to content */
+       /* Set maximum width for smaller screens */
+      padding: 20px; /* Adjust padding for smaller screens */
+      margin: 20px; /* Add margin for spacing */
+    }
+    
+    .setting-top-part {
+      width: 320px; /* Set width to 100% for full width */
+      justify-content: space-between; /* Center align heading */
+    }
+    
+    .slip-container {
+      width: 100%; /* Set width to 100% for full width */
+      margin-top: 20px; /* Adjust margin for spacing */
+      margin-bottom: 20px; /* Adjust margin for spacing */
+    }
+    
+    .slidecontainer {
+      width: 100%; /* Set width to 100% for full width */
+    }
+    
+    .slider {
+      width: 250px; 
+      justify-content: space-between;/* Adjust width to fit container with margin */
+    }
+    
+    .percentage-container {
+      width: 100%; /* Set width to 100% for full width */
+      justify-content: space-between; /* Adjust spacing */
+    }
+    
+    #result p {
+      width: auto; /* Allow width to adjust */
+      margin-left: 20px;
+      /* margin-right: 20px; Add right margin */
+    }
+    
+    .setting-save-btn button {
+      width: 320px; /* Set width to 100% for full width */
+      /* max-width: 400px; Set maximum width for smaller screens */
+    }
+  }
   
+
+
+
+  
+
+/* ///////////////////////// */
+
+
+
