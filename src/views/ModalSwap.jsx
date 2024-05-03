@@ -86,6 +86,8 @@ const ModalSwap = () => {
   const swap = () => {
     setiitem(item);
     setitem(iitem);
+    setcoin(iitem2);
+    setiitem2(coin);
   };
 
   const openModal = () => {
