@@ -17,7 +17,7 @@ const Modalenter = ({onClose,items,value,item,setiitem,setitem,value1,iitem}) =>
     const timeoutId = setTimeout(() => {
       setShowDiv1(false);
       setShowDiv2(true);
-    }, 12000); // 12 seconds in milliseconds
+    }, 11000); // 12 seconds in milliseconds
 
     return () => clearTimeout(timeoutId); // Cleanup function for useEffect
   }, []);
@@ -190,10 +190,10 @@ onClick={swap}
 
 
 
-{/* <div className='cross-btn'>
+<div className='cross-btn'>
       <button onClick={onClose}>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="c-fgJvlr c-fgJvlr-igsmDXe-css"><path d="M7 7L17 17" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 17L17 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-            </button></div> */}
+            </button></div>
 
 
 </div>
@@ -201,15 +201,15 @@ onClick={swap}
 <div className='number-container'>
 <div className='number-border' id='firstborder'></div>
 <div className='number-circle-container' >
-<div  className='number-circle' id='firstcircle'>1</div>
+<div  className='number-circle' id='firstcircle'><p>1</p></div>
 <div id='firsttext'><h3>
-  initiating Swap</h3></div>
+  initiating Swap</h3></div><p></p>
   </div>
 
 
   <div className='number-border' id='secondborder'></div>
   <div className='number-circle-container' >
-<div  className='number-circle' id='secondcircle'>2</div>
+<div  className='number-circle' id='secondcircle'><p>2</p></div>
 <div id='second-text'><h3>
   Bridging Assets</h3></div>
   </div>
@@ -217,14 +217,14 @@ onClick={swap}
 
   <div className='number-border' id='thirdborder'></div>
   <div className='number-circle-container' >
-<div  className='number-circle' id='thirdcircle'>3</div>
+<div  className='number-circle' id='thirdcircle'><p>3</p></div>
 <div id='thirdtext'><h3>
  Approving transfer</h3></div>
   </div>
 
 
   <div className='number-circle-container'>
-<div  className='number-circle' id='fourthcircle'>4</div>
+<div  className='number-circle' id='fourthcircle'><p>4</p></div>
 <div id='fourthtext'> <h3>
   Complete</h3></div>
   </div>

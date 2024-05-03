@@ -107,6 +107,10 @@ width: 28px;
 
 }
 
+.number-circle p{
+  margin-top: 3px;
+}
+
 
 .number-container{
 margin-top: -50px;
@@ -185,6 +189,7 @@ margin-right: 10px;
   justify-content: left;
   margin-top: -10px;
   margin-bottom: -10px;
+  margin-left: 10px;
 }
 
 
@@ -293,10 +298,12 @@ margin-right: 10px;
 #fourthcircle{
   animation-name: fourthcircle; 
   animation-duration: 10s;
+  animation-fill-mode: forwards;
 }
 #fourthtext h3{
   animation-name: fourthtext; 
   animation-duration: 10s;
+  animation-fill-mode: forwards;
 }
 
 

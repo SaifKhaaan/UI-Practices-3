@@ -268,8 +268,9 @@ const ModalSwap = () => {
       </div>
 
       {searchmodal2 && (
-        <SearchModal onClose={()=>setsearchmodal2(false)} setcoin={setItems} />
+        <SearchModal onClose={()=>setsearchmodal2(false)} setcoin={setiitem2} />
       )}
+      {/* setcoin={setItems} */}
 
       <footer >
         <button  onClick={()=>setmodalenter(true) }className="swap-btn"  disabled={!value }      style={{ filter: value ? "none" : "blur(1px)" }} >  
